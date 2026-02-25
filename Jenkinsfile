@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'docker compose up -d --force-recreate'
+        bat 'docker compose up -d --force-recreate keycloak app loki promtail prometheus grafana'
       }
     }
   }
