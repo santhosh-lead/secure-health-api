@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'docker compose up -d app'
+        bat 'docker compose up -d --force-recreate'
       }
     }
   }
